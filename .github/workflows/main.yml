@@ -18,12 +18,12 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Start application
+    - name: Start application in background
       run: npm start &
-      timeout-minutes: 1
+      timeout-minutes: 2
 
     - name: Wait for app to be ready
-      run: sleep 10
+      run: sleep 15  # Aumenta o tempo de espera
 
     - name: Run OWASP ZAP Baseline Scan
       uses: zaproxy/action-baseline@v0.12.0
