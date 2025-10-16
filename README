@@ -1,0 +1,25 @@
+# Testes de Segurança Automatizados - ClickSeguro
+
+Este repositório contém o projeto prático para a atividade de testes de segurança automatizados da FIAP. O objetivo é configurar um pipeline no GitHub Actions usando OWASP ZAP CLI para escanear a aplicação web **ClickSeguro**, detectando vulnerabilidades antes do deploy.
+
+### O que está aqui?
+- **Código da aplicação:** Uma app web simples (Node.js) hospedada em `http://localhost:8080`.
+- **Workflow:** Arquivo `.github/workflows/security-scan.yml` para rodar os testes.
+- **Relatório:** Gera um relatório HTML com os resultados do OWASP ZAP.
+
+### Passos da Atividade
+1. Configurar o OWASP ZAP CLI no GitHub Actions para escanear a app.
+2. Fazer o pipeline falhar se houver vulnerabilidades "Alta" ou "Crítica".
+3. Analisar o relatório (total de alertas, por severidade, tipos comuns).
+4. Inserir uma vulnerabilidade proposital e verificar a detecção.
+5. Salvar o relatório como artefato no GitHub Actions.
+
+### Como rodar?
+1. Clone o repositório: `git clone <URL-do-repositório>`.
+2. Instale as dependências: `npm install`.
+3. Inicie a app: `npm start`.
+4. Execute o workflow no GitHub Actions (push ou manual).
+
+### Resultados
+- O pipeline detecta vulnerabilidades como XSS.
+- Relatório disponível como artefato após cada execução.
